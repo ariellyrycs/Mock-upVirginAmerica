@@ -1,0 +1,21 @@
+{
+  "name": "virginamerica",
+  "version": "0.0.0",
+  "authors": [
+    "ariellyrycs <ariel_556@hotmail.com>"
+  ],
+  "description": "mock-up",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "components-font-awesome": "~4.1.0",
+    "normalize-css": "~3.0.1"
+  }
+}

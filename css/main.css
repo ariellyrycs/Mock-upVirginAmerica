@@ -1,0 +1,272 @@
+body, html{
+    font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    display: block;
+    position: fixed;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    float:left;
+    text-align: center;
+}
+#pages {
+    margin-top: -55px;
+    width:100%;
+    height:100%;
+    display:block;
+    padding: 0;
+    float:left;
+}
+.onepage-pagination{
+    display: none;
+}
+
+
+h1 {
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -2px;
+    margin-bottom: 5px;
+}
+
+
+
+.socialmedia {
+    padding-top: 40px;
+    position: absolute;
+    right: 40px;
+    width: 80px;
+}
+
+i.buttonsSocial {
+    color:#CCC;
+}
+.buttonsSocial:hover {
+    margin-top: -80px;
+    color: #666;
+}
+.logo-size {
+    width: 160px;
+    height: 55px;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+}
+.background-cover {
+    margin-top: -60px;
+    padding-bottom: 60px;
+}
+.slide:nth-child(1) {
+    background-color: #FFF;
+}
+.slide:nth-child(2) {
+    color:white;
+    background-color: #7b4397;
+}
+.slide:nth-child(3) {
+
+    background-color: #178bfb;
+}
+.slide:nth-child(4) {
+    color:white;
+    background-color: #7b4397;
+}
+.slide:nth-child(5) {
+
+    background-color: #3cc5f1;
+}
+.slide:nth-child(6) {
+
+    background-color: #19a3c0;
+}
+.slide:nth-child(7) {
+    background-size: cover;
+    background: url("../img/page6/picture-bg.jpg") center center no-repeat;
+}
+.slide:nth-child(8) {
+
+    background-color: #EDEDED;
+}
+.slide:nth-child(9) {
+
+}
+.slide:nth-child(10) {
+
+    background-color: #262a2d;
+}
+.slide:nth-child(11) {
+    background-color: #FFF;
+}
+/*medias*/
+.welcome {
+    max-height: 700px;
+    width: 100%;
+    height: 550px;
+    position: absolute;
+}
+.illustration-cover{
+    border: 0;
+    display: block;
+    max-height: 700px;
+    height: 100%;
+    width: 100%;
+    bottom: 53px;
+}
+.content {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+}
+.center-image-laptop {
+    margin:11px 145px 60px;
+    display: none;
+}
+.laptop {
+    width:60%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+.next {
+    display: block;
+    position: absolute;
+    margin-left: -40px;
+    width: 80px;
+    bottom:-46px;
+    left:50%;
+    height:80px;
+}
+.next:hover{
+    bottom: -30px;
+}
+.mask {
+    position: absolute;
+    top: -1px;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+    background: url("../img/page4/arrow-mask.svg") center 1px no-repeat;
+    background-size: 2560px 68px;
+}
+.mask-next {
+    display: block;
+    height: 100%;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paragraph {
+    margin: 20px 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 28px;
+    width:980px;
+    height:56px;
+}
+
+.way-to-work-content {
+    margin-top:150px;
+    width:100%;
+    height:400px;
+}
+.demo-column {
+    display:block;
+    float:left;
+    width: 50%;
+    box-sizing: border-box;
+    padding:0 40px 0 60px;
+}
+.demo-column:first-child{
+    padding:0 60px 0 40px;
+    border-right: 1px solid #1373d0;
+}
+.demo {
+    width:50%;
+}
+#animation-guy {
+    width:31%;
+    margin:40px auto;
+    position:relative;
+}
+.gear {
+    height: 16%;
+    position:absolute;
+}
+#gear-1 {
+    top: 25px;
+    left: 45px;
+}
+#gear-2 {
+    top: 41px;
+    left: 28px;
+}
+
+
+
+
+
+
+
+.display-lap {
+    width: 397px;
+    height: 242px;
+    position: relative;
+    top: -278px;
+    display: block;
+    margin-left: 244px;
+    margin-right: auto;
+    overflow: hidden;
+
+}
+.display-lap>div {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:auto;
+    bottom:-100%;
+}
+#first-laptop-slide {
+    bottom:0;
+}
+.focus {
+    position: relative;
+    background-color: rgba(128,0,128, 0);
+    border: 3px solid rgb(128,0,128);
+    box-sizing: border-box;
+    display:none;
+}
+.flow-1>div{
+    height: 24px;
+    width: 46px;
+    left: 50px;
+    top: -193px;
+}
+.flow-2>div{
+    height: 36px;
+    width: 38px;
+    left: 137px;
+    top: -102px;
+}
+.flow-3>div{
+    height: 15px;
+    width: 15px;
+    left: 302px;
+    top: -91px;
+}
+.flow-4>div{
+    height: 16px;
+    width: 26px;
+    left: 251px;
+    top: -168px;
+}
+
+.display-lap img{
+    height:100%;
+    width:100%;
+}
+/*
+path {
+    fill: #7b4397;
+}*
