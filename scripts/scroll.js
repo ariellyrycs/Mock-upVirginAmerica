@@ -27,42 +27,78 @@
                 negativeDegrees = degrees * (-1);
             },50);
         },
-        showLap = function () {
-            $('.center-image-laptop').fadeIn(500);
+        showLap = function (element) {
+            $('#laptop-' + element).fadeIn(500);
         },
-        hideLap = function () {
-            $('.center-image-laptop').css('display','none');
+        hideLap = function (element) {
+            $('#laptop-' + element).css('display','none');
         },
         focusBox = function (element) {
-            setTimeout(function () {
-
-                element.find('div')
-                    .fadeIn(1000)
-                    .css({
-                        'background-color':'rgb(128,0,128)'
-                    })
-                    .animate({
-                        opacity: 1
-                    },2000).resolve().promise();
-
-
-            }, 1000);
+                element.find('div').delay(300)
+                    .fadeIn(300).promise().done(function () {
+                        var opacity = 0.0,
+                            forwards = true,
+                            intervalInterval,
+                            interval = function  () {
+                                if(forwards) {
+                                    opacity = (0.3 + opacity);
+                                    if(opacity >= 1) {
+                                        forwards = false;
+                                    }
+                                } else {
+                                    opacity = (opacity - 0.1);
+                                    if(opacity < 0) {
+                                        clearInterval(intervalInterval);
+                                        this.fadeOut(300);
+                                    }
+                                }
+                                this.css('background-color', 'rgba(128,0,128, '+ opacity + ')');
+                            }.bind(this);
+                        intervalInterval = setInterval(interval, 20);
+                    });
         },
         ltSlides = function () {
+            var lastSlide = $('#flow-' + currentElement);
+            focusBox(lastSlide);
             interval = setInterval(function() {
-                var lastSlide;
-                $('.flow-' + currentElement).animate({
+                lastSlide.animate({
                     bottom:'100%'
                 }, 500);
                 currentElement = (currentElement === 4)? 1: currentElement + 1;
-                lastSlide = $('.flow-' + currentElement);
+                lastSlide = $('#flow-' + currentElement);
                 lastSlide.css('bottom','-100%').animate({
                     bottom:'0'
                 }, 500);
                 focusBox(lastSlide);
-            },3000);
-    }
-
+            },1500);
+        },
+        addSmartPhoneAds = function (){
+            $('.no-nonsense').fadeIn(500).find('img').delay(500).animate({
+                width: '175px'
+            }).fadeIn(500);
+        },
+        removeSmartPhoneAds = function (){
+            $('.no-nonsense').css('display', 'none').find('img').css({
+                display: 'none',
+                width:'150px'
+            });
+        },
+        transitionWithFlash = function () {
+            var i = 1,
+                changeSlide = function () {
+                    var aux = $('#flash-' + i);
+                    i = (i === 4)? 1 :i + 1;
+                    $('#flash-' + i).css('display', 'block').animate({
+                        opacity: '1'
+                    });
+                    aux.css({
+                        display:'none',
+                        opacity:'0.5'
+                    });
+                    focusBox();
+            };
+            setInterval(changeSlide, 2000);
+        };
     $('#pages').onepage_scroll({
         sectionContainer: 'section',
         easing: 'ease',
@@ -73,20 +109,29 @@
         },
         afterMove: function(index) {
             if(index === 2) {
-                showLap();
+                showLap(1);
             } else {
-                hideLap();
+                hideLap(1);
             }
             if(index === 3) {
                 rotateGears();
             }
             if(index === 4) {
-                showLap();
+                showLap(2);
                 ltSlides();
             } else if (interval) {
                 clearInterval(interval);
-                interval = 0;
-                hideLap();
+                hideLap(2);
+            }
+            if(index === 6){
+                transitionWithFlash();
+            } else {
+
+            }
+            if(index === 7) {
+                addSmartPhoneAds();
+            } else {
+                removeSmartPhoneAds();
             }
         },
         loop: false,
@@ -100,8 +145,6 @@
     $('.change-slide').click(function () {
         $('#pages').moveDown();
     });
-
-
     $('.mask-next').mouseenter(function () {
         $('.mask').css('background-position-y', '-13px');
     });

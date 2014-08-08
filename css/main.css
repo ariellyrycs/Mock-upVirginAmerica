@@ -121,8 +121,12 @@ i.buttonsSocial {
 }
 .center-image-laptop {
     margin:11px 145px 60px;
+}
+
+.center-image-laptop:not(.display-already) {
     display: none;
 }
+
 .laptop {
     width:60%;
     display:block;
@@ -210,63 +214,118 @@ i.buttonsSocial {
 
 
 .display-lap {
-    width: 397px;
-    height: 242px;
     position: relative;
-    top: -278px;
-    display: block;
-    margin-left: 244px;
-    margin-right: auto;
     overflow: hidden;
+    display: block;
+    margin-right: auto;
 
 }
-.display-lap>div {
+.display-pos-1 {
+    width: 397px;
+    height: 242px;
+    top: -278px;
+    margin-left: 244px;
+}
+.display-pos-1>div {
     height:100%;
     width:100%;
     position:absolute;
     top:auto;
+}
+.display-pos-1>div:not(:first-child) {
     bottom:-100%;
 }
-#first-laptop-slide {
+.first-laptop-slide {
     bottom:0;
 }
 .focus {
     position: relative;
-    background-color: rgba(128,0,128, 0);
-    border: 3px solid rgb(128,0,128);
+    border: 2px solid rgba(128,0,128, 0.4);
     box-sizing: border-box;
     display:none;
 }
-.flow-1>div{
+#flow-1>div{
     height: 24px;
     width: 46px;
     left: 50px;
     top: -193px;
 }
-.flow-2>div{
+#flow-2>div{
     height: 36px;
     width: 38px;
     left: 137px;
     top: -102px;
 }
-.flow-3>div{
+#flow-3>div{
     height: 15px;
     width: 15px;
     left: 302px;
     top: -91px;
 }
-.flow-4>div{
+#flow-4>div{
     height: 16px;
     width: 26px;
     left: 251px;
     top: -168px;
 }
 
+
+/**/
 .display-lap img{
     height:100%;
     width:100%;
 }
-/*
-path {
-    fill: #7b4397;
-}*
+.display-pos-2 {
+    width: 408px;
+    height: 255px;
+    top: -291px;
+    margin-left: 241px;
+}
+.display-pos-2>div {
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+.display-pos-2>div:not(:first-child) {
+    display: none;
+    opacity: 0.5;
+}
+#flash-1>div{
+    height: 13px;
+    width: 23px;
+    top: -143px;
+    left: 149px;
+}
+#flash-2>div{
+    height: 13px;
+    width: 23px;
+    top: -143px;
+    left: 119px;
+}
+#flash-3>div{
+    height: 13px;
+    width: 23px;
+    top: -143px;
+    left: 89px;
+}
+
+/**/
+.no-nonsense {
+    box-sizing: border-box;
+    color: #FFF;
+    display:none;
+    position: absolute;
+    right: 8%;
+    top: 64%;
+    margin-top: -280px;
+    padding-bottom: 380px;
+    width: 420px;   background: rgba(0,0,0, 0.75) url("../img/page6/picture-iphone.png") bottom center no-repeat;
+}
+.no-nonsense>img {
+    position: absolute;
+    width:150px;
+    left: 50%;
+    margin-left: -85px;
+    bottom: 25px;
+    display:none;
+}
