@@ -10,6 +10,7 @@
         intervalGradient,
         intervalDraw,
         idSlide_9 = 0,
+        rotateGearsInterval,
         showSocialMedia = function () {
             $('.socialmedia').fadeIn(200);
         },
@@ -21,7 +22,7 @@
                 negativeDegrees,
                 gear1 = $('#gear-1'),
                 gear2 = $('#gear-2');
-            setInterval(function () {
+            rotateGearsInterval = setInterval(function () {
                 gear1.css("transform" , "rotate(" + degrees + "deg)");
                 /* Opera, Chrome, and Safari */
                 gear1.css("WebkitTransform" , "rotate(" + degrees + "deg)");
@@ -129,7 +130,7 @@
             focusBox($('#flash-1'));
             slideFlashInterval = setInterval(changeSlide, 2000);
         },
-        lerp = function(a, b, u) {
+        gradientConvert = function(a, b, u) {
             return (1 - u) * a + u * b;
         },
         gradientSlideColor = function(start, end, duration) {
@@ -138,9 +139,9 @@
                 step_u = 1.0 / steps,
                 u = 0.0,
                 theInterval = setInterval(function() {
-                    var r = parseInt(lerp(start.r, end.r, u)),
-                        g = parseInt(lerp(start.g, end.g, u)),
-                        b = parseInt(lerp(start.b, end.b, u)),
+                    var r = parseInt(gradientConvert(start.r, end.r, u)),
+                        g = parseInt(gradientConvert(start.g, end.g, u)),
+                        b = parseInt(gradientConvert(start.b, end.b, u)),
                         colorName = 'rgb(' + r + ',' + g + ',' + b + ')';
                     this.css('background-color', colorName);
                     u += step_u;
@@ -231,64 +232,67 @@
             console.log(index);
         },
         afterMove: function(index) {
-            if(index === 1){
-                showSocialMedia();
-            } else if(index !== 11) {
-                hideSocialMedia();
-            }
-            if(index === 2) {
-                showLap(1);
-            } else {
-                hideLap(1);
-            }
-            if(index === 3) {
-                rotateGears();
-            }
-            if(index === 4) {
-                showLap(2);
-                ltSlides();
-            } else if (interval) {
-                clearInterval(interval);
-                hideLap(2);
-            }
-            if(index === 5){
-                showDevices();
-            } else {
-                hideDevices();
-            }
-            if(index === 6){
-                transitionWithFlash();
-            } else {
-                clearInterval(slideFlashInterval);
-            }
-            if(index === 7) {
-                addSmartPhoneAds();
-            } else {
-                removeSmartPhoneAds();
-            }
-            if(index === 8){
-                handMovement();
-            } else {
-                hideHand();
-            }
-            if(index === 9) {
-                slide_9();
-            } else {
-                clearInterval(colorSlideInterval);
-            }
-            if(index === 10){
-                lookShow();
-            } else {
-                lookHide();
-            }
-            if(index === 11){
-                textBackgroundColor();
-                showSocialMedia();
-            } else {
-                stopGradient();
-                if(index !== 1){
+            switch (index) {
+                case 1:
+                    showSocialMedia();
+                    hideLap(1);
+                    break;
+                case 2:
                     hideSocialMedia();
-                }
+                    showLap(1);
+                    clearInterval(rotateGearsInterval);
+                    break;
+                case 3:
+                    hideLap(1);
+                    rotateGears();
+                    clearInterval(interval);
+                    hideLap(2);
+                    break;
+                case 4:
+                    showSocialMedia();
+                    showLap(2);
+                    clearInterval(rotateGearsInterval);
+                    ltSlides();
+                    hideDevices();
+                    break;
+                case 5:
+                    clearInterval(interval);
+                    hideLap(2);
+                    showDevices();
+                    clearInterval(slideFlashInterval);
+                    break;
+                case 6:
+                    hideDevices();
+                    transitionWithFlash();
+                    removeSmartPhoneAds();
+                    break;
+                case 7:
+                    addSmartPhoneAds();
+                    clearInterval(slideFlashInterval);
+                    hideHand();
+                    break;
+                case 8:
+                    removeSmartPhoneAds();
+                    handMovement();
+                    clearInterval(colorSlideInterval);
+                    break;
+                case 9:
+                    slide_9();
+                    hideHand();
+                    lookHide();
+                    break;
+                case 10:
+                    clearInterval(colorSlideInterval);
+                    lookShow();
+                    stopGradient();
+                    hideSocialMedia();
+                    break;
+                case 11:
+                    lookHide();
+                    textBackgroundColor();
+                    showSocialMedia();
+                    break;
+
             }
         },
         loop: false,

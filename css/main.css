@@ -28,6 +28,7 @@ h1 {
     margin-top: 30px;
     margin-bottom: 10px;
     line-height: 50px;
+    z-index: 1;
 }
 h2 {
     font-size: 48px;
@@ -42,6 +43,8 @@ h3 {
     font-weight: 900;
     line-height: 50px;
     margin-bottom: 8px;
+    z-index: 1;
+    margin-top: 0;
 }
 h4 {
     font-size: 31px;
@@ -57,10 +60,7 @@ h4 {
 .second-slide-Text h2{
     margin-bottom: 20px;
 }
-.second-slide-Text p {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: -0.5px;
+.paragraph {
     margin-top: 20px;
     margin-bottom: 30px;
     font-weight: 400;
@@ -142,6 +142,7 @@ h4 {
     text-rendering: optimizeLegibility;
     position: absolute;
     top: 50%;
+    left:10%;
 }
 .display-iPad strong{
     display: block;
@@ -154,13 +155,16 @@ h4 {
 
 
 
+
+
+
+
 .socialmedia {
     padding-top: 40px;
     position: absolute;
-    right: 40px;
     width: 80px;
-    top: 70px;
-    left: 80%;
+    top: 8%;
+    right: 5%;
 }
 
 i.buttonsSocial {
@@ -171,10 +175,11 @@ i.buttonsSocial {
     color: #666;
 }
 .logo-size {
-    width: 160px;
+    width: 12%;
     height: 55px;
-    left: 130px;
+    left: 15%;
     position: absolute;
+    top: 90px;
 }
 
 .slide {
@@ -184,9 +189,14 @@ i.buttonsSocial {
 .background-cover {
     margin-top: -60px;
     padding-bottom: 60px;
+    background-size: cover;
+    background: url("../img/page6/picture-bg.jpg") center center no-repeat;
+    background-attachment: local;
+     /* background-size: 100% auto; */
 }
 .slide:nth-child(1) {
     background-color: #FFF;
+    z-index:-2;
 }
 .slide:nth-child(2) {
     color:white;
@@ -209,8 +219,7 @@ i.buttonsSocial {
     background-color: #19a3c0;
 }
 .slide:nth-child(7) {
-    background-size: cover;
-    background: url("../img/page6/picture-bg.jpg") center center no-repeat;
+
 }
 .slide:nth-child(8) {
 
@@ -232,6 +241,10 @@ i.buttonsSocial {
     width: 100%;
     height: 550px;
     position: absolute;
+    top: 24%;
+    z-index: -1;
+    top: 31%;
+
 }
 .illustration-cover{
     border: 0;
@@ -249,11 +262,9 @@ i.buttonsSocial {
     max-height: 700px;
     height: 100%;
 }
-.first-lap{
-    min-height: 311px;
-}
 .center-image-laptop {
-    margin:11px 145px 60px;
+    margin: 11px auto 60px;
+    max-height: 325px;
 }
 
 .center-image-laptop:not(.display-already, .first-lap) {
@@ -261,10 +272,11 @@ i.buttonsSocial {
 }
 
 .laptop {
-    width:60%;
-    display:block;
+    max-width: 558px;
+    max-height: 100%;
+    display: block;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
 }
 .next {
     display: block;
@@ -315,10 +327,10 @@ i.buttonsSocial {
     box-sizing: border-box;
     padding:0 40px 0 60px;
 }
-.demo-column:first-child{
-    padding:0 60px 0 40px;
+.demo-column:first-child {
     border-right: 1px solid #1373d0;
 }
+
 .demo {
     margin: 40px 0;
     width: 77%;
@@ -333,12 +345,12 @@ i.buttonsSocial {
     position:absolute;
 }
 #gear-1 {
-    top: 25px;
-    left: 45px;
+    top: 16%;
+    left: 30%;
 }
 #gear-2 {
-    top: 41px;
-    left: 28px;
+    top: 26%;
+    left: 19%;
 }
 
 
@@ -349,16 +361,22 @@ i.buttonsSocial {
 
 .display-lap {
     position: relative;
-    overflow: hidden;
     display: block;
     margin-right: auto;
 
 }
+.display-lap:not(.display-iPad) {
+    overflow: hidden;
+}
+
 .display-pos-1 {
-    width: 397px;
-    height: 242px;
-    top: -278px;
-    margin-left: 244px;
+    height: 252px;
+    width: 414px;
+    left: -0.2%;
+    margin-left: auto;
+    margin-bottom: auto;
+    position: relative;
+    top: -290px;
 }
 .display-pos-1>div {
     height:100%;
@@ -379,40 +397,40 @@ i.buttonsSocial {
     display:none;
 }
 #flow-1>div{
-    height: 24px;
-    width: 46px;
-    left: 50px;
-    top: -193px;
+    height: 10%;
+    width: 11.2%;
+    left: 25.5%;
+    top: -80%;
 }
 #flow-2>div{
-    height: 36px;
-    width: 38px;
-    left: 137px;
-    top: -102px;
+    height: 16%;
+    width: 9.5%;
+    left: 34.5%;
+    top: -43%;
 }
 #flow-3>div{
-    height: 15px;
-    width: 15px;
-    left: 302px;
-    top: -91px;
+    height: 6%;
+    width: 4%;
+    left: 76%;
+    top: -38%;
 }
 #flow-4>div{
-    height: 16px;
-    width: 26px;
-    left: 251px;
-    top: -168px;
+    height: 6.5%;
+    width: 6.5%;
+    left: 63.2%;
+    top: -70%;
 }
 /**/
 .devices{
     height:200px;
-    width: 50%;
+    width: 590px;
     margin-right: auto;
     margin-left: auto;
     top: 16%;
     position:relative;
 }
 .devices>div {
-    height: 100%;
+    /*height: 100%;*/
     position: relative;
     float: left;
     opacity: 0;
@@ -438,56 +456,63 @@ i.buttonsSocial {
 
 /**/
 .display-lap img {
-    height:100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 .display-lap img:not(.no-width) {
     width:100%;
 }
 .display-pos-2 {
-    width: 408px;
-    height: 255px;
-    top: -291px;
-    margin-left: 241px;
+    width: 425px;
+    height: 266px;
+    top: -305px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .display-pos-2>div {
     height:100%;
     width:100%;
     position: absolute;
+
 }
 .display-pos-2>div:not(:first-child) {
     display: none;
     opacity: 0.5;
 }
 #flash-1>div{
-    height: 13px;
-    width: 23px;
-    top: -143px;
-    left: 149px;
+    height: 5%;
+    width: 5.5%;
+    top: -56.5%;
+    left: 36.5%;
 }
 #flash-2>div{
-    height: 13px;
-    width: 23px;
-    top: -143px;
-    left: 119px;
+    height: 5%;
+    width: 5%;
+    top: -56.5%;
+    left: 29.5%;
 }
 #flash-3>div{
-    height: 13px;
-    width: 23px;
-    top: -143px;
-    left: 89px;
-}
+    height: 5%;
+    width: 5.5%;
+    top: -56.5%;
+    left: 22%;
 
+}
+.content-task h2{
+    margin-bottom: 15px;
+}
 /**/
 .no-nonsense {
     box-sizing: border-box;
     color: #FFF;
-    display:none;
+    display: none;
     position: absolute;
-    right: 8%;
-    top: 64%;
-    margin-top: -280px;
-    padding-bottom: 380px;
-    width: 420px;   background: rgba(0,0,0, 0.75) url("../img/page6/picture-iphone.png") bottom center no-repeat;
+    right: 2%;
+    top: 15%;
+    height: 87%;
+    padding: 40px 40px 380px;
+    width: 420px;
+    background: rgba(0,0,0, 0.75) url("../img/page6/picture-iphone.png") bottom center no-repeat;
 }
 .no-nonsense>img {
     position: absolute;
@@ -550,11 +575,6 @@ i.buttonsSocial {
 .display-iPad>div:not(:first-child):not(:last-child) {
     display: none;
 }
-.display-iPad h3 {
-    position: absolute;
-    top: 50%;
-    left:10%;
-}
 .filter {
     opacity: 0;
     z-index: 1;
@@ -591,6 +611,7 @@ section[data-index="9"] {
     height: 100%;
     position: absolute;
     display: flex;
+    width:100%;
 }
 .look>div:not(.content-logo){
     opacity: 0;
@@ -629,6 +650,9 @@ section[data-index="9"] {
     width: 370px;
     text-decoration: blink;
 }
+.book:hover {
+    background: #FF0000;
+}
 .final-logo{
     background: #FFF;
     border-top: 1px solid #DDD;
@@ -650,7 +674,7 @@ section[data-index="9"] {
 .more-questions {
     display: block;
     position: relative;
-    top: -144%;
+    top: -114%;
     color: #888;
     font-weight: 500;
     font-size: 15px;
@@ -685,4 +709,224 @@ section[data-index="9"] {
     height: 70px;
     line-height: 70px;
     margin: 0 auto 15px auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .paragraph {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+    }
+    .demo-column:first-child {
+        padding:0 60px 0 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 21px;
+        line-height: 25px;
+        letter-spacing: -1.5px;
+    }
+    h2:not(.non-top-spacing){
+        margin-top: 100px;
+    }
+    .logo-size {
+        width:100px;
+        top: 71px;
+    }
+    h1{
+        font-size: 30px;
+        line-height: 32px;
+        letter-spacing: -2px;
+        margin-bottom: 5px;
+        margin-top: 138px;
+    }
+    .check-it-out{
+        font-size: 24px;
+        letter-spacing: -1px;
+        line-height: 28px;
+    }
+    .first-lap {
+        width:100%;
+    }
+    .content {
+        padding: 30px 40px;
+        margin-top: 55px;
+    }
+    .none-padding{
+        padding:0;
+    }
+    .booking-flight-text{
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 16px;
+    }
+    .laptop {
+        max-width: 300px;
+    }
+    #laptop-1{
+        width: 100%;
+    }
+    .display-pos-1 {
+        height: 143px;
+        width: 224px;
+        top: -165px;
+    }
+    .paragraph{
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 16px;
+        margin: 10px 0 30px;
+        padding: 0;
+        width:100%;
+    }
+    .demo-column {
+        width: 100%;
+        padding: 0;
+
+    }
+    .demo-column:first-child {
+        border-right: 0;
+
+    }
+    #demo-part-2{
+        display: none;
+    }
+
+    .way-to-work-content h4{
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .way-to-work-content p{
+        color: #FFF;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0;
+    }
+    .way-to-work-content {
+        margin-top: 20px;
+    }
+    .demo {
+        margin: 15px 0 5px;
+    }
+    #animation-guy {
+        width: 45%;
+        margin: 17px auto;
+    }
+    #gear-1 {
+        top: 16%;
+        left: 31%;
+    }
+    #gear-2 {
+        top: 26.5%;
+        left: 20%;
+    }
+    .laptop-surfer{
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0;
+        padding: 0 30px;
+    }
+    .devices {
+        width: 90%;
+        height: 0%;
+    }
+    .getting-fun {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 16px;
+        margin: 0 0 20px;
+        padding: 0;
+    }
+    .display-pos-2{
+        width: 228px;
+        height: 144px;
+        top: -164px;
+    }
+    .background-cover {
+        background-size:auto 100%;
+    }
+    .no-nonsense {
+        width: 100%;
+        right:0;
+    }
+    .back-pocket {
+        font-size: 21px;
+        line-height: 25px;
+        letter-spacing: -1.5px;
+    }
+    .pass-text, .arrow, .hand, .text-change-color, .wardrobe {
+        display:none;
+    }
+    .boarding-pass {
+        bottom: auto;
+        left: 50%;
+        margin-top: 20px;
+        margin-left: -120px;
+        width: 240px
+    }
+    .vine{
+        height: 240px;
+        left: 0;
+        top: 0;
+        width: 240px;
+    }
+    .spacing-bottom {
+        margin-bottom: 16px;
+    }
+    .display-iPad h3, .display-iPad strong {
+        font-size: 23px;
+        font-weight: 300;
+        line-height: 21px;
+        letter-spacing: 0;
+        margin: 0 auto;
+        display: inline;
+        position: static;
+    }
+    .look img {
+        margin:auto 0;
+    }
+    .wrapper h2{
+        font-size: 48px;
+        font-weight: 200;
+        letter-spacing: -2px;
+        line-height: 50px;
+        margin: 0 auto 25px;
+    }
+    .wrapper p {
+        font-size: 16px;
+        height: auto;
+        line-height: 20px;
+        margin-bottom: 25px;
+        padding: 0 40px;
+    }
+    .book {
+        font-size: 14px;
+        line-height: 42px;
+        width: 280px;
+        height: 42px;
+    }
+    .final-logo-icon {
+        width: 120px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-height: 490px) and (max-width: 767px) {
+    .background-cover p {
+        display:none;
+    }
+    .look {
+        top: 79%;
+    }
+    .more-questions {
+        top: -76%;
+    }
+    .final-logo {
+        top:65%;
+        padding-top: 14px;
+
+    }
 }
